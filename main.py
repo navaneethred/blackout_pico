@@ -12,13 +12,6 @@ ota_updater.download_and_install_update_if_available()
 
 URL = "https://webhook.site/984075aa-5d14-4e1c-a40a-420d379d6b5c"
 
-wlan = network.WLAN(network.STA_IF)
-wlan.active(True)
-wlan.connect(SSID, PASSWORD)
-
-while not wlan.isconnected():
-    time.sleep(1)
-
 while True:
     try:
         print("Sending heartbeat...")
